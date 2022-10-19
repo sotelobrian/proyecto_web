@@ -245,13 +245,37 @@ filter: blur(20px);
     display: flex;
 }
 
+.contenedor_iconos_footer{
+    width: 30px;
+    margin-left: 20px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.contenedor_iconos_footer a{
+    color: rgb(58,63,106);
+    margin-top: 13px;
+    font-size: 20px;
+    width: 50PX;
+}
+
 .contenedor_p_local{
-    width: 60%;
-    padding-top: 20px;
+    /*width: 60%; DESCOMENTAR EN CASO QUE NO ME GUSTE COMO QUEDO MI FOOTER ESTAS ES LA OPCION QUE ANDA PERFECTO  */
+    width: 45%; 
+    /*padding-top: 25px;*/
+    padding: 20px 5px 5px 5px;
+    margin-top: 5px;
+}
+
+
+.contenedor_redes_whattsapp{
+    height:150px;
+    width: 55%;
+    display: flex;
 }
 
  .redes {
-    width: 25%;
+    width: 55%;
     height: 100%;
     margin-right: 30%;  
     margin-bottom: 40px;
@@ -269,21 +293,20 @@ filter: blur(20px);
 
 .whattsapp a{
     color:rgb(80,195,97);
+    margin-left: 30px;
 }
 
 .contenedor_p_redes a{
-    color:red;
     margin-top: 10px;
     font-size: 35px;
     width: 10%;
-    height: 10px;
-        
+    height: 10px;       
 }
 
 .redes a{
     color: rgb(58,63,106);
     margin-top: 45px;
-    width: 18%;
+    width: 55PX;
 }
 
 .contenedor_aside {
@@ -292,8 +315,9 @@ filter: blur(20px);
 }
 
 .p_local{
-    padding-left: 80px;
-    padding-top: 10px;
+    padding-left: 30px;
+    padding: 8px;
+    /*padding-top: 10px;*/
 }
 
 .aside_1{
@@ -423,11 +447,13 @@ label {
 
 .seccion_contenedor_galeria{  
     width: 100%;
-    height: 450px;
+    height: 420px;
     background-color:  #e0e0e0;
     border-radius: 20px;
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
+    flex-wrap:wrap;
     justify-content:space-between;
 }
 
@@ -567,32 +593,193 @@ font-size: 25px;
 }
 
 /*---------------------------------------------------MEDIAS QUERI----------------------------------------------------------------------*/
-/* medias queri de mi pagina imagentes */
+
+/*--PARA DISPOSITIVOS CON PANTALLAS PEQUEÑAS O CELULARES EN MODO VERTICAL--------------------------------------------------------------*/
 
 @media only screen and (min-width:320px) and (max-width:479px) {
 
-.contenedor_imagenes{
-    width: 100%;
-    height: 250px;
+/*-------------------------------------- medias queri de mi pagina imagentes------------------------------------------------------*/
+
+header{
+        height: 130px;
+        width: auto;
+        background-color: white;
 }
 
-.imagen_portada{
-    background-image: url(/multimedia/globos_logo2.png);
+.contenedor_imagenes{
+    width: 100%;
+    height: 100px;
+}
+
+.portada{
+    width: 107%;
+    height: 100px;
+    background-image: url(multimedia/globos_logo.png);
     background-size: cover;
-    background-position:left;
-    width:100%;
-    height:250px;
+    background-position:center;
+}
+
+nav{
+    width: 100%;
+    height: 30px;
+    margin-left: 0px;
+    background-color: white;
+    display: flex;
+    justify-content:space-between;
+}
+
+.menu{ 
+    list-style: none;
+    padding: 0;
+    background:white;
+    height: 30px;
+    width: 100%;
+}
+
+.menu li{
+    display:inline;
+    width: 50px;
+    text-align:center;    
+}
+
+.menu li a{
+    font-size: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FF00ff;
+    padding: 10px 10px 10px 10px;
+         
+}
+
+.menu li a:hover{
+    width: 30 px;
+    border-radius: 10px;
+    background: #0cb7f2;      
+}
+
+a{
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration:none;
+    float:left;
+}
+
+.seccion_contenedor_galeria{  
+    width: 100%;
+    height: 610px;
+    background-color:  #e0e0e0;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /*display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap; /*se posicionan las fotos abajo cuando se achica la pagina*/
+    display: inline-block;
+}
+
+.foto{
+    /*width:150px;*/
+    width: 100%;
+    height: 150px;
+    display: flex;
+}
+
+ .foto :hover{
+    border: 2px solid grey;
+    transform: rotate(-3deg);
+}
+
+.pie_foto {
+   margin-top: 50px;
+   font-size: 12px;
+   text-align: center;
+   margin-left: 20px;
+   width: 150px;
+   height: 20px;
+}
+
+.foto_galeria_pintureria{
+    background-image: url(/multimedia/pintureria_coco1.jpg);
+    background-size: cover;
+    background-position:center;
+    height: 130px;
+    width: 130px;
+    margin-top: 10px;
+    margin-left: 20px;
+    box-shadow: 0 4px 8px 0 black,0 6px 20px 0 black ;      
+    
+}
+
+.foto_galeria{
+    height: 130px;
+    width: 130px;
+    margin-top: 10px;
+    margin-left: 20px;
+    box-shadow: 0 4px 8px 0 black,0 6px 20px 0 black ;   
+}
+
+.foto_galeria2{
+    background-image: url(/multimedia/trabajo_auto_ploteado.png);
+    background-position: center;
+    background-size: cover;
+    height: 130px;
+    width: 130px;
+    margin-top: 10px;
+    margin-left: 20px;
+    box-shadow: 0 4px 8px 0 black,0 6px 20px 0 black ;   
+}
+
+.foto_galeria3{
+    background-image: url(/multimedia/trabajo_tarjetas.png);
+    background-position: center;
+    background-size: cover;
+    height: 130px;
+    width: 130px;
+    margin-top: 10px;
+    margin-left: 20px;
+    box-shadow: 0 4px 8px 0 black,0 6px 20px 0 black ;   
+}
+
+.seccion_compra_segura{
+    width: 100%;
+    height: 90px;
+    background-color:#e0e0e0;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+.imagen_compra_segura{
+    width: 95%;
+    height: 60px;
+    margin-left: 5px;
+    margin-top: 12px;
+    border-radius: 10px;  
 }
 
 footer{
     width: 100%;
-    height: 300px;
+    height: 280px;
+}
+
+.contenedor_iconos_footer{
+    width: 30px;
+    margin-left: 0px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+.contenedor_iconos_footer a {
+    width: 35px;
+    padding: 5px;
+    margin-top: 10px;
 }
 
 .div_contenedor_footer{
         width: 100%;
         display: inline-block;        
 }
+
     .contenedor_p_local{
         width: 100%;
         padding-top: 0px;
@@ -605,15 +792,262 @@ footer{
         font-size: 17px;
     }
 
+    .contenedor_redes_whattsapp{
+        height:50px;
+        width: 100%;
+        display: flex;
+    }
+   
     .redes{
+        display: flex;
         width: 100%;
         height: 70px; 
         text-align: center;
         text-shadow: 0 0 5px black;   
         padding: 5px;
         margin-bottom: 1px;
-
     }
+
+    .redes a{
+        padding-left: 20px;   
+        margin-top: 5px;
+        font-size: 50px;
+    }
+
+    .whattsapp{
+        width: 35%;
+        height: 70px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 1px;
+    }
+
+    .whattsapp a{
+        text-align: center;
+        margin-top: 9px;
+        margin-left: 0px;
+    }
+
+    marquee{
+        margin-top: 10px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+        background-color:#e0e0e0;
+    }
+
+}
+
+/*--PARA DISPOSITIVOS CON PANTALLAS PEQUEÑAS O CELULARES EN MODO HORIZONTAL----------------------------------------------------------*/
+
+@media only screen and (min-width:480px) and (max-width:599px) {
+
+/*-------------------------------------- medias queri de mi pagina imagentes-----------------------------------------------------------*/
+header{
+        height: 200px;
+        width: auto;
+        background-color: white;
+}
+
+.contenedor_imagenes{
+    width: 100%;
+    height: 150px;
+}
+
+.portada{
+    width: 106%;
+    height: 145px;
+    background-image: url(multimedia/globos_logo.png);
+    background-size: cover;
+    background-position:center;
+}
+
+nav{
+    width: 100%;
+    height: 40px;
+    margin-left: 0px;
+    background-color: white;
+    display: flex;
+    justify-content:space-between;
+}
+
+.menu{ 
+    list-style: none;
+    padding: 0;
+    background:white;
+    height: 40px;
+    width: 100%;
+}
+
+.menu li{
+    display:inline;
+    width: 40px;
+    text-align:center;    
+}
+
+.menu li a{
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FF00ff;
+    padding: 15px 15px 15px 15px;
+         
+}
+
+.menu li a:hover{
+    width:  px;
+    border-radius: 7px;
+    background: #0cb7f2;      
+}
+
+a{
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration:none;
+    float:left;
+}
+
+.seccion_contenedor_galeria{  
+    width: 100%;
+    height: 820px;
+    background-color:  #e0e0e0;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.foto{
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+
+ .foto :hover{
+    border: 2px solid grey;
+    transform: rotate(-3deg);
+}
+
+.pie_foto {
+   margin-top: 90px;
+   font-size: 15px;
+   text-align: center;
+   margin-left: 20px;
+   width: 40%;
+   height: 20px;
+}
+
+.foto_galeria_pintureria{
+    background-image: url(/multimedia/pintureria_coco1.jpg);
+    background-size: cover;
+    background-position:center;
+    height: 190px;
+    width: 190px;
+    margin-top: 5px;
+    margin-left: 20px;
+    box-shadow: 0 4px 8px 0 black,0 6px 20px 0 black ;      
+    
+}
+
+.foto_galeria{
+    height: 190px;
+    width: 190px;
+    margin-top: 10px;
+    margin-left: 20px;
+    box-shadow: 0 4px 8px 0 black,0 6px 20px 0 black ;   
+}
+
+.foto_galeria2{
+    background-image: url(/multimedia/trabajo_auto_ploteado.png);
+    background-position: center;
+    background-size: cover;
+    height: 190px;
+    width: 190px;
+    margin-top: 10px;
+    margin-left: 20px;
+    box-shadow: 0 4px 8px 0 black,0 6px 20px 0 black ;   
+}
+
+.foto_galeria3{
+    background-image: url(/multimedia/trabajo_tarjetas.png);
+    background-position: center;
+    background-size: cover;
+    height: 190px;
+    width: 190px;
+    margin-top: 10px;
+    margin-left: 20px;
+    box-shadow: 0 4px 8px 0 black,0 6px 20px 0 black ;   
+}
+
+.seccion_compra_segura{
+    width: 100%;
+    height: 130px;
+    background-color:#e0e0e0;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+.imagen_compra_segura{
+    width: 95%;
+    height: 90px;
+    margin-left: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    
+}
+
+footer{
+    width: 100%;
+    height: 270px;
+}
+
+.div_contenedor_footer{
+        width: 100%;
+        display: inline-block;        
+}
+
+.contenedor_iconos_footer{
+    width: 30px;
+    margin-left: 5px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.contenedor_iconos_footer a{
+    color: rgb(58,63,106);
+    margin-top: 10px;
+    font-size: 25px;
+    width: 50PX;
+    padding-bottom: 10px;
+}
+
+.contenedor_p_local{
+        width: 100%;
+        padding-top: 0px;
+    }
+
+.p_local {
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: start;
+        padding-left: 40px;
+        padding-top: 15px;
+        font-size: 17px;
+    }
+
+.contenedor_redes_whattsapp{
+        height:70px;
+        width: 55%;
+        display: flex;
+    }
+
+.redes{
+    width: 100%;
+    height: 70px; 
+    text-align: center;
+    text-shadow: 0 0 5px black;   
+    padding: 5px;
+    margin-bottom: 1px;
+    display: flex;
+}
 
     .redes a{
         padding-left: 80px;   
@@ -631,13 +1065,499 @@ footer{
     .whattsapp a{
         text-align: center;
         margin-left: 45px;
+        margin-top: 10px;
     }
 
     marquee{
-        margin-top: 140px;
+        margin-top:20px;
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 30px;
+        font-size: 20px;
         background-color:#e0e0e0;
     }
 
 }
+
+@media only screen and (min-width:600px) and (max-width:767px) {
+
+ /*-------------------------------------- medias queri de mi pagina imagentes-----------------------------------------------------------*/
+
+ header{
+    height: 200px;
+    width: auto;
+    background-color: white;
+}
+
+.contenedor_imagenes{
+width: 100%;
+height: 150px;
+}
+
+.portada{
+width: 106%;
+height: 145px;
+background-image: url(multimedia/globos_logo.png);
+background-size: cover;
+background-position:center;
+}
+
+nav{
+width: 100%;
+height: 40px;
+margin-left: 0px;
+background-color: white;
+display: flex;
+justify-content:space-between;
+}
+
+.menu{ 
+list-style: none;
+padding: 0;
+background:white;
+height: 40px;
+width: 100%;
+}
+
+.menu li{
+display:inline;
+width: 40px;
+text-align:center;    
+}
+
+.menu li a{
+font-size: 13px;
+font-weight: bold;
+text-decoration: none;
+color: #FF00ff;
+padding: 15px 15px 15px 15px;
+     
+}
+
+.menu li a:hover{
+width:  px;
+border-radius: 7px;
+background: #0cb7f2;      
+}
+
+a{
+text-align: center;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+text-decoration:none;
+float:left;
+}
+
+.seccion_contenedor_galeria{  
+width: 100%;
+height: 520px;
+background-color:  #e0e0e0;
+border-radius: 20px;
+margin-top: 5px;
+margin-bottom: 5px;
+display:flex;
+flex-direction: row;
+justify-content: space-evenly;
+}
+
+.foto{
+width: 50%;
+height: 200px;
+padding-left: 15px;
+}
+
+.foto :hover{
+border: 2px solid grey;
+transform: rotate(-3deg);
+}
+
+.pie_foto {
+margin-top: 10px;
+font-size: 15px;
+text-align: center;
+margin-left: 50px;
+width: 40%;
+height: 30px;
+}
+
+.foto_galeria_pintureria{
+background-image: url(/multimedia/pintureria_coco1.jpg);
+background-size: cover;
+background-position:center;
+height: 190px;
+width: 190px;
+margin-top: 5px;
+margin-left: 20px;
+box-shadow: 0 4px 8px 0 black,0 6px 20px 0 black ;      
+
+}
+
+.foto_galeria{
+height: 190px;
+width: 190px;
+margin-top: 10px;
+margin-left: 20px;
+box-shadow: 0 4px 8px 0 black,0 6px 20px 0 black ;   
+}
+
+.foto_galeria2{
+background-image: url(/multimedia/trabajo_auto_ploteado.png);
+background-position: center;
+background-size: cover;
+height: 190px;
+width: 190px;
+margin-top: 10px;
+margin-left: 20px;
+box-shadow: 0 4px 8px 0 black,0 6px 20px 0 black ;   
+}
+
+.foto_galeria3{
+background-image: url(/multimedia/trabajo_tarjetas.png);
+background-position: center;
+background-size: cover;
+height: 190px;
+width: 190px;
+margin-top: 10px;
+margin-left: 20px;
+box-shadow: 0 4px 8px 0 black,0 6px 20px 0 black ;   
+}
+
+.seccion_compra_segura{
+width: 100%;
+height: 150px;
+background-color:#e0e0e0;
+border-radius: 20px;
+margin-top: 5px;
+}
+
+.imagen_compra_segura{
+width: 95%;
+height: 110px;
+margin-left: 15px;
+margin-top: 20px;
+border-radius: 10px;
+
+}
+
+footer{
+width: 100%;
+height: 260px;
+}
+
+.div_contenedor_footer{
+    width: 100%;
+    display: inline-block;        
+}
+
+.contenedor_iconos_footer{
+width: 30px;
+margin-left: 5px;
+margin-top: 15px;
+text-align: center;
+}
+
+.contenedor_iconos_footer a{
+color: rgb(58,63,106);
+margin-top: 10px;
+font-size: 25px;
+width: 50PX;
+padding-bottom: 10px;
+}
+
+.contenedor_p_local{
+    width: 100%;
+    padding-top: 0px;
+}
+
+.p_local {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: start;
+    padding-left: 40px;
+    padding-top: 19px;
+    font-size: 17px;
+}
+
+.contenedor_redes_whattsapp{
+    height:70px;
+    width: 100%;
+    display: flex;
+}
+
+.redes{
+width: 100%;
+height: 70px; 
+text-align: center;
+text-shadow: 0 0 5px black;   
+padding: 5px;
+margin-bottom: 1px;
+display: flex;
+}
+
+.redes a{
+    padding-left: 80px;   
+    margin-top: 5px;
+    font-size: 50px;
+}
+
+.whattsapp{
+    width: 40%;
+    height: 70px;
+    margin-left: 130px;
+    margin-top: 1px;
+}
+
+.whattsapp a{
+    text-align: center;
+    margin-left: 45px;
+    margin-top: 10px;
+}
+
+marquee{
+    margin-top:20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    background-color:#e0e0e0;
+}
+
+}
+
+
+@media only screen and (min-width:768px) and (max-width:1023px) {
+ /*-------------------------------------- medias queri de mi pagina imagentes-----------------------------------------------------------*/
+
+ header{
+    height: 250px;
+    width: auto;
+    background-color: white;
+}
+
+.contenedor_imagenes{
+width: 100%;
+height: 200px;
+}
+
+.portada{
+width: 100%;
+height: 200px;
+background-image: url(multimedia/globos_logo.png);
+background-size: cover;
+background-position:center;
+}
+
+nav{
+width: 100%;
+height: 50px;
+margin-left: 0px;
+background-color: white;
+display: flex;
+justify-content:space-between;
+}
+
+.menu{ 
+list-style: none;
+padding: 0;
+background:white;
+height: 40px;
+width: 100%;
+}
+
+.menu li{
+display:inline;
+width: 40px;
+text-align:center;    
+}
+
+.menu li a{
+font-size: 16px;
+font-weight: bold;
+text-decoration: none;
+color: #FF00ff;
+padding: 15px 15px 15px 15px;
+     
+}
+
+.menu li a:hover{
+width:  px;
+border-radius: 7px;
+background: #0cb7f2;      
+}
+
+a{
+text-align: center;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+text-decoration:none;
+float:left;
+}
+
+.seccion_contenedor_galeria{  
+width: 100%;
+height: 620px;
+background-color:  #e0e0e0;
+border-radius: 20px;
+margin-top: 5px;
+margin-bottom: 5px;
+display:flex;
+flex-direction: row;
+justify-content: space-evenly;
+}
+
+.foto{
+width: 50%;
+height: 250px;
+padding-left: 40px;
+}
+
+.foto :hover{
+border: 2px solid grey;
+transform: rotate(-3deg);
+}
+
+.pie_foto {
+margin-top: 10px;
+font-size: 15px;
+text-align: center;
+margin-left: 50px;
+width: 40%;
+height: 30px;
+}
+
+.foto_galeria_pintureria{
+background-image: url(/multimedia/pintureria_coco1.jpg);
+background-size: cover;
+background-position:center;
+height: 250px;
+width: 250px;
+margin-top: 5px;
+margin-left: 20px;
+box-shadow: 0 4px 8px 0 black,0 6px 20px 0 black ;      
+
+}
+
+.foto_galeria{
+height: 250px;
+width: 250px;
+margin-top: 10px;
+margin-left: 20px;
+box-shadow: 0 4px 8px 0 black,0 6px 20px 0 black ;   
+}
+
+.foto_galeria2{
+background-image: url(/multimedia/trabajo_auto_ploteado.png);
+background-position: center;
+background-size: cover;
+height: 250px;
+width: 250px;
+margin-top: 10px;
+margin-left: 20px;
+box-shadow: 0 4px 8px 0 black,0 6px 20px 0 black ;   
+}
+
+.foto_galeria3{
+background-image: url(/multimedia/trabajo_tarjetas.png);
+background-position: center;
+background-size: cover;
+height: 250px;
+width: 250px;
+margin-top: 10px;
+margin-left: 20px;
+box-shadow: 0 4px 8px 0 black,0 6px 20px 0 black ;   
+}
+
+.seccion_compra_segura{
+width: 100%;
+height: 200px;
+background-color:#e0e0e0;
+border-radius: 20px;
+margin-top: 5px;
+}
+
+.imagen_compra_segura{
+width: 100%;
+height: 150px;
+margin-left: 5px;
+margin-top: 20px;
+border-radius: 10px;
+
+}
+
+footer{
+width: 100%;
+height: 260px;
+}
+
+.div_contenedor_footer{
+    width: 100%;
+    display: inline-block;        
+}
+
+.contenedor_iconos_footer{
+width: 30px;
+margin-left: 5px;
+margin-top: 15px;
+text-align: center;
+}
+
+.contenedor_iconos_footer a{
+color: rgb(58,63,106);
+margin-top: 10px;
+font-size: 25px;
+width: 50PX;
+padding-bottom: 10px;
+}
+
+.contenedor_p_local{
+    width: 100%;
+    padding-top: 0px;
+}
+
+.p_local {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: start;
+    padding-left: 40px;
+    padding-top: 19px;
+    font-size: 17px;
+}
+
+.contenedor_redes_whattsapp{
+    height:70px;
+    width: 100%;
+    display: flex;
+}
+
+.redes{
+width: 100%;
+height: 70px; 
+text-align: center;
+text-shadow: 0 0 5px black;   
+padding: 5px;
+margin-bottom: 1px;
+display: flex;
+}
+
+.redes a{
+    padding-left: 80px;   
+    margin-top: 5px;
+    font-size: 50px;
+}
+
+.whattsapp{
+    width: 40%;
+    height: 70px;
+    margin-left: 130px;
+    margin-top: 1px;
+}
+
+.whattsapp a{
+    text-align: center;
+    margin-left: 45px;
+    margin-top: 10px;
+}
+
+marquee{
+    margin-top:20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    background-color:#e0e0e0;
+}
+
+}
+
+
+
